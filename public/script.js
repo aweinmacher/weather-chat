@@ -40,7 +40,8 @@ var WeatherApp = function () {
         return arr[arr.length-1].id + 1;
     }
 
-    var fetch = function () {
+    var fetch = function (e) {
+        e.preventDefault();
         var city = $("#city").val();
         var buildUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d703871f861842b79c60988ccf3b17ec`
         // AJAX
@@ -82,7 +83,7 @@ var WeatherApp = function () {
 
   var app = WeatherApp();
   app.render();
-  $(".search-city").on("click", app.fetch);
+  $("#searchCityForm").on("submit", app.fetch);
   $('.results').on('click', '.post-comment', function () {
     var currentResult = $(this).closest('.result-block');
     var resId = currentResult.data().id;

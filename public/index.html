@@ -23,22 +23,28 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="input-group">
-                    <input type="text" class="form-control" id="city" placeholder="Enter City">
-                    <span class="input-group-btn">
-                        <button class="btn btn-primary search-city" type="button">Get temp!</button>
-                    </span>
-                </div> <!-- /input-group -->
+                <form action="" id="searchCityForm">
+                    <div class="input-group">
+                        <input type="text" required="true" class="form-control" id="city" placeholder="Enter City">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary search-city" type="submit">Get temp!</button>
+                        </span> 
+                    </div>
+                </form>
+                <!-- /input-group -->
                 <div class="line"></div>
-            </div>  <!-- /.col-lg-12 -->
-        </div> <!-- /.row -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
 
         <div class="row">
             <div class="results col-md-12">
                 <!-- blocks of results and input forms here -->
             </div>
         </div>
-    </div> <!-- /.container -->
+    </div>
+    <!-- /.container -->
 
 
     <script id="weather-template" type="text/x-handlebars-template">
