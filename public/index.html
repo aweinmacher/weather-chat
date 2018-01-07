@@ -43,11 +43,14 @@
 
     <script id="weather-template" type="text/x-handlebars-template">
         {{#each cities}}
-        <div class="result-block panel panel-default">
+        <div class="result-block panel panel-default" data-id='{{id}}'>
                 <h4>{{city}}<i class="fa fa-trash" aria-hidden="true"></i></h4>
                 <div class="weather">{{celsius}}°C / {{fahrenheit}}°F at {{hours}}:{{min}} on {{day}}/{{month}}/{{year}}</div>
-                <p class="comment">Comment</p>
-                <p class="comment">Comment</p>
+                <div class="comments">
+                    {{#each commentsObj.comments}}
+                        <p>{{text}}</p>
+                    {{/each}}
+                </div>
                 <div class="input-group">
                         <input type="text" class="form-control comment" placeholder="Comment about the weather in {{city}}">
                         <span class="input-group-btn">
