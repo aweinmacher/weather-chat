@@ -36,28 +36,16 @@
         <div class="row">
             <div class="results col-md-12">
                 <!-- blocks of results and input forms here -->
-                <div class="result-block panel panel-default">
-                    <h4>nuuk<i class="fa fa-trash" aria-hidden="true"></i></h4>
-                    <div class="weather">Temperature at 14:37 on 19/07/2016</div>
-                    <p class="comment">Comment</p>
-                    <p class="comment">Comment</p>
-                    <div class="input-group">
-                            <input type="text" class="form-control comment" placeholder="Comment about the weather in City">
-                            <span class="input-group-btn">
-                                <button class="btn btn-success post-comment" type="button">Comment</button>
-                            </span>
-                    </div> 
-                </div> <!-- /.result-block -->
             </div>
         </div>
     </div> <!-- /.container -->
 
 
     <script id="weather-template" type="text/x-handlebars-template">
-        {{#each result}}
+        {{#each cities}}
         <div class="result-block panel panel-default">
                 <h4>{{city}}<i class="fa fa-trash" aria-hidden="true"></i></h4>
-                <div class="weather">{{celsius}}°C / {{fahrenheit}}°F at {{time}} on {{date}}</div>
+                <div class="weather">{{celsius}}°C / {{fahrenheit}}°F at {{hours}}:{{min}} on {{day}}/{{month}}/{{year}}</div>
                 <p class="comment">Comment</p>
                 <p class="comment">Comment</p>
                 <div class="input-group">
