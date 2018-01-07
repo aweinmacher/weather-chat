@@ -4,3 +4,38 @@
 body {
     margin: 0;
 }
+.page-header {
+    border: 0;
+    margin-bottom: 0;
+}
+.input-group {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.line {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.result-block {
+    position: relative;
+    padding: 6px 12px;
+
+}
+.fa {
+    float: right;
+    color: darkred;
+    font-size: 20px;
+    font-weight: 100;
+}
+/* .icon::after {
+    display: table;
+    content: "";
+    clear: both;
+} */
+h4 {
+    text-transform: uppercase;
+}
+.weather {
+    padding: 10px;
+    font-size: 1.2em;
+}
